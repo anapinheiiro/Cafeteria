@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style3.css">
+    <script>
+
+        function validateLogin(event) {
+            event.preventDefault();  erro
+
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            if (email === "") {
+                alert("Por favor, insira seu e-mail.");
+                return false;
+            }
+
+            if (password === "") {
+                alert("Por favor, insira sua senha.");
+                return false;
+            }
+
+           
+            alert("Login realizado com sucesso!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <section class="primeira">
+            <img src="imagens/cadastro.avif" alt="">
+        </section>
+
+        <section class="segundo">
+            <div class="form">
+                <form action="#" onsubmit="return validateLogin(event)">
+                    <div class="form-header">
+                        <div class="titulo">
+                            <h1>Login</h1>
+                        </div>
+                    </div>
+
+                        <div class="input-box">
+                            <label for="email">E-mail</label>
+                            <input id="email" type="email" name="email" placeholder="Digite o seu E-mail" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="password">Senha</label>
+                            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                        </div>
+
+                        <div class="box">
+                            <a href="#">Esqueceu a senha?</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="button">
+                        <button type="submit">Entrar</button>
+                    </div>
+                    <footer>
+                        <div class="login">
+                            <p>ou</p>
+                            <p>Não possui uma conta? <a href="cadastro.html">Cadastre-se!</a></p>
+                        </div>
+                        <div class="text"></div>
+                    </footer>
+                </form>
+
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-image: url(imagens/background5.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+main {
+    display: flex;
+    margin: 90px auto;
+    height: 520px;
+    width: 900px;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.842);
+}
+
+
+img {
+    border-radius: 10px 0px 0px 10px;
+    height: 550px;
+}
+
+button {
+    width: 100%;
+    cursor: pointer;
+    margin: 1rem;
+    padding: 0.8rem 1.2rem;
+    background-color: #381b20;
+    border: none;
+    color: #ffff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #00000041;
+    font-size: 1rem;
+
+}
+
+.segundo {
+    width: 542px;
+    padding: 30px 120px;
+    height: 550px;
+    background-color: white;
+    border-radius: 0px 10px 10px 0px;
+    
+}
+
+.titulo {
+    color: #381b20;
+    margin-bottom: 25px;
+}
+
+.login {
+    text-align: center;
+}
+
+.input-group1 {
+    margin-top: 10px; 
+    display: flex;
+    gap: 30px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.rem;
+}
+
+.input-box input {
+    width: 100%;
+    margin: 0.6rem 0;
+    padding: 0.8rem 3.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #00000041;
+    font-size: 0.8rem;
+}

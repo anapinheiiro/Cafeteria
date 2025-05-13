@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style2.css">
+
+    <script>
+           function validateForm(event) {
+            event.preventDefault(); 
+
+            var firstname = document.getElementById("firstname").value;
+            var lastname = document.getElementById("lastname").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmpassword = document.getElementById("confirmpassword").value;
+            var newslatter = document.getElementById("newslatter").checked;
+
+            if (firstname === "" || lastname === "") {
+                alert("Por favor, preencha o nome e sobrenome.");
+                return false;
+            }
+
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (email === "" || !email.match(emailPattern)) {
+                alert("Por favor, insira um e-mail válido.");
+                return false;
+            }
+
+            if (password === "" || confirmpassword === "") {
+                alert("Por favor, preencha os campos de senha e confirmação de senha.");
+                return false;
+            }
+
+            if (password !== confirmpassword) {
+                alert("As senhas não coincidem.");
+                return false;
+            }
+
+            if (!newslatter) {
+                alert("Você deve aceitar os termos de serviço e a política de privacidade.");
+                return false;
+            }
+
+            alert("Cadastro realizado com sucesso!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <section class="primeira">
+            <img src="imagens/cadastro.avif" alt="">
+        </section>
+
+        <section class="segundo">
+            <div class="form">
+                <form action="#" onsubmit="return validateForm(event)">
+                    <div class="form-header">
+                        <div class="titulo">
+                            <h1>Cadastre-se</h1>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-group1">
+                            <div class="input-box">
+                                <label for="firstname">Nome</label>
+                                <input id="firstname" type="text" name="firstname" placeholder="Digite o seu nome" required>
+                            </div>
+
+                            <div class="input-box">
+                                <label for="lastname">Sobrenome</label>
+                                <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="email">E-mail</label>
+                            <input id="email" type="email" name="email" placeholder="Digite o seu E-mail" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="password">Senha</label>
+                            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="confirmpassword">Confirme a sua senha</label>
+                            <input id="confirmpassword" type="password" name="password" placeholder="Confirme sua senha" required>
+                        </div>
+                        <div class="box">
+                            <input id="newslatter" type="checkbox" name="newslatter">
+                            <label for="newslatter">Li e concordo com os termos de serviço e nossa política de privacidade</label>
+                        </div>
+                    </div>
+
+                    <div class="button">
+                        <button type="submit">Cadastre-se</button>
+                    </div>
+                    <footer>
+                        <div class="login">
+                            <p>ou</p>
+                            <p>Já possui uma conta? Faça <a href="login.html">Login!</a></p>
+                        </div>
+                        <div class="text"></div>
+                    </footer>
+                </form>
+
+
+
+
+
+
+
+
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>
